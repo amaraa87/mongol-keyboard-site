@@ -1,0 +1,87 @@
+// The hero demo: replays exactly what the keyboard does.
+// Latin keystrokes press on the keycap row while the field fills with
+// Cyrillic (the й in "сайн" appears the way the real engine produces it),
+// then the ✨Засах key fires and the grammar fix lands.
+(function () {
+  "use strict";
+
+  var field = document.getElementById("demo-text");
+  var latin = document.getElementById("demo-latin");
+  var row = document.getElementById("demo-keys");
+  if (!field || !latin || !row) return;
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  // [latin key pressed, document state after the keystroke]
+  var steps = [
+    ["s", "с"],
+    ["a", "са"],
+    ["i", "сай"],
+    ["n", "сайн"],
+    [" ", "сайн "],
+    ["b", "сайн б"],
+    ["a", "сайн ба"],
+    ["i", "сайн бай"],
+    ["n", "сайн байн"],
+    ["a", "сайн байна"],
+    [" ", "сайн байна "],
+    ["u", "сайн байна у"],
+    ["u", "сайн байна уу"],
+  ];
+  var FIXED = "Сайн байна уу?";
+
+  function key(name) {
+    return row.querySelector('[data-key="' + name + '"]');
+  }
+
+  function press(name) {
+    var el = key(name);
+    if (!el) return;
+    el.classList.add("is-down");
+    setTimeout(function () { el.classList.remove("is-down"); }, 140);
+  }
+
+  function setText(value, withCaret) {
+    field.textContent = value;
+    if (withCaret) {
+      var caret = document.createElement("span");
+      caret.className = "caret";
+      field.appendChild(caret);
+    }
+  }
+
+  function run() {
+    var i = 0;
+    setText("", true);
+    latin.textContent = "";
+
+    var typer = setInterval(function () {
+      if (i >= steps.length) {
+        clearInterval(typer);
+        // Pause, then the ✨Засах beat: press, glow, fix lands.
+        setTimeout(function () {
+          var fix = key("fix");
+          press("fix");
+          if (fix) fix.classList.add("is-glow");
+          setTimeout(function () {
+            setText(FIXED, false);
+            latin.textContent = "✨ засварласан · corrected";
+            if (fix) fix.classList.remove("is-glow");
+          }, 550);
+          // Hold the result, then loop.
+          setTimeout(run, 4200);
+        }, 900);
+        return;
+      }
+      var step = steps[i];
+      press(step[0] === " " ? "space" : step[0]);
+      setText(step[1], true);
+      latin.textContent = steps
+        .slice(0, i + 1)
+        .map(function (s) { return s[0] === " " ? "␣" : s[0]; })
+        .join(" ");
+      i += 1;
+    }, 260);
+  }
+
+  run();
+})();

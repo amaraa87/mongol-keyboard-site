@@ -1,0 +1,52 @@
+name: Deploy site
+
+# Publishes this repo (landing, privacy policy, support pages for the
+# Монгол Keyboard iOS app) to GitHub Pages on every push to main.
+# Served at: https://<owner>.github.io/mongol-keyboard-site/
+#
+# Custom (sub)domain, e.g. keyboard.example.mn:
+#   1. DNS: CNAME keyboard.example.mn → <owner>.github.io
+#   2. Repo Settings → Secrets and variables → Actions → Variables:
+#      add PAGES_CUSTOM_DOMAIN = keyboard.example.mn
+#   3. Re-run this workflow, then enable "Enforce HTTPS" in Settings → Pages.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Add CNAME when a custom domain is configured
+        if: vars.PAGES_CUSTOM_DOMAIN != ''
+        env:
+          DOMAIN: ${{ vars.PAGES_CUSTOM_DOMAIN }}
+        run: printf '%s\n' "$DOMAIN" > CNAME
+
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - id: deployment
+        uses: actions/deploy-pages@v4

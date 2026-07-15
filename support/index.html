@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="mn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Тусламж — Монгол Keyboard</title>
+  <meta name="description" content="Монгол Keyboard-ийн тусламж: гараа суулгах, ✨Засах-г тохируулах, түгээмэл асуултууд, холбоо барих.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Golos+Text:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230E3880'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial'>Ө</text></svg>">
+</head>
+<body>
+  <div class="wrap">
+
+    <header class="site-header">
+      <a class="wordmark" href="../"><span class="glyph" aria-hidden="true">Ө</span>Монгол Keyboard</a>
+      <nav class="site-nav" aria-label="Site">
+        <a href="../">Нүүр</a>
+        <a href="./" aria-current="page">Тусламж</a>
+        <a href="../privacy/">Privacy</a>
+      </nav>
+    </header>
+
+    <main class="faq">
+      <h1 class="doc-title" style="font-family:'Unbounded',sans-serif;font-weight:500;font-size:clamp(24px,4vw,34px);margin:40px 0 6px;">Тусламж · Support</h1>
+      <p style="color:var(--ink-soft);margin:0 0 26px;">Түгээмэл асуултууд — доороос олдохгүй бол бидэнтэй холбогдоорой.<br><span style="font-size:14px;">Common questions; contact us below if yours isn't answered.</span></p>
+
+      <details>
+        <summary>Гар цэсэнд харагдахгүй байна <span class="en-q" lang="en">The keyboard doesn't appear</span></summary>
+        <p>Settings → General → Keyboard → Keyboards → <i>Add New Keyboard…</i> → <b>Монгол Keyboard</b>-г нэмсэн эсэхээ шалгаарай. Нэмсний дараа аль ч апп дотор 🌐 товчийг дараад (эсвэл удаан дарж) Монгол Keyboard-г сонгоно.</p>
+        <p lang="en"><i>Add the keyboard in iOS Settings first, then switch to it with the 🌐 key in any app.</i></p>
+      </details>
+
+      <details>
+        <summary>“Allow Full Access” яагаад хэрэгтэй вэ? <span class="en-q" lang="en">Why Full Access?</span></summary>
+        <p>Зөвхөн ✨Засах товчны AI дуудлага сүлжээ ашигладаг учраас iOS үүнийг шаарддаг. Бичих, хөрвүүлэх нь бүрэн офлайн — Full Access-гүйгээр ч ажиллана. Бичсэн зүйл тань хэзээ ч бүртгэгддэггүй, илгээгддэггүй — <a href="../privacy/">privacy policy</a>-г үзнэ үү.</p>
+        <p lang="en"><i>iOS requires it for any keyboard that makes network requests; we use it only for the ✨Засах call. Typing never leaves your device.</i></p>
+      </details>
+
+      <details>
+        <summary>✨Засах ажиллахгүй байна <span class="en-q" lang="en">✨Засах isn't working</span></summary>
+        <p>Дарааллаар нь шалгаарай:</p>
+        <p>1 — Гарын тохиргоонд <b>Allow Full Access</b> асаалттай юу?<br>
+           2 — Апп дотор <b>сервер URL</b> эсвэл <b>API түлхүүр</b> оруулсан уу? (Аль нэг нь л хангалттай.)<br>
+           3 — Өгүүлбэр кириллээр байна уу? Латин голдуу бичвэрийг Засах илгээдэггүй.<br>
+           4 — 2 секунд тутамд нэг, өдөрт 200 хүсэлтийн хязгаартай — түр хүлээгээд дахин оролдоорой.</p>
+        <p lang="en"><i>Check Full Access, then that a server URL or API key is set, the sentence is Cyrillic, and you're within the 2s/200-per-day limits.</i></p>
+      </details>
+
+      <details>
+        <summary>Засах товч “нэвтрэх ⚙︎” гэж анивчаад байна <span class="en-q" lang="en">The fix key flashes “нэвтрэх ⚙︎”</span></summary>
+        <p>Тохиргоо дутуу гэсэн үг: Монгол Keyboard аппыг нээгээд сервер URL (эсвэл API түлхүүр) оруулаад <b>Хадгалах</b> дарна. Серверийн токен тохируулсан бол зөв эсэхийг шалгаарай.</p>
+        <p lang="en"><i>Open the host app and save a server URL (or API key); if your server uses a token, check it matches.</i></p>
+      </details>
+
+      <details>
+        <summary>Ямар үсэг ямар товчоор гарах вэ? <span class="en-q" lang="en">What maps to what?</span></summary>
+        <p><code>sh→ш</code> · <code>ch→ч</code> · <code>ts/c→ц</code> · <code>kh/h/x→х</code> · <code>yo→ё</code> · <code>yu→ю</code> · <code>ya→я</code> · <code>ii→ий</code> · <code>oe/ö→ө</code> · <code>ue/ü→ү</code> — мөн ө, ү тусдаа товчтой. Эгшгийн дараах <code>i</code> нь <code>й</code> болно (<span style="font-family:'JetBrains Mono',monospace">sain→сайн</span>). АБ↔AB товчоор хөрвүүлэлтийг түр унтрааж латинаар бичиж болно.</p>
+      </details>
+
+      <details>
+        <summary>Хэрэглээний хязгаар ба өртөг <span class="en-q" lang="en">Limits and cost</span></summary>
+        <p>Засах нэг удаад нэг л өгүүлбэр (≤500 тэмдэгт) илгээдэг, 2 секунд тутамд нэгээс олонгүй, өдөрт 200-аас илүүгүй. Хариу нь зөвхөн засварласан өгүүлбэр байх боломжтой тул энэ холболтоор чат хийх, эссэ бичүүлэх зэрэг кредит шатаах хэрэглээ бүтэхгүй.</p>
+        <p lang="en"><i>One sentence per tap, min 2s apart, max 200/day — and the response can only ever be the corrected sentence, so the integration can't be repurposed into a chat.</i></p>
+      </details>
+
+      <div class="contact-card">
+        <h2>Холбоо барих · Contact</h2>
+        <p>И-мэйл: <a href="mailto:amarsanaa.jargal@matsuyaginza.com">amarsanaa.jargal@matsuyaginza.com</a></p>
+        <p style="font-size:14px;opacity:.85;">Ихэвчлэн 1–2 хоногт хариулна · We usually reply within a day or two.</p>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2026 Монгол Keyboard</span>
+      <nav aria-label="Footer">
+        <a href="./">Тусламж · Support</a>
+        <a href="../privacy/">Privacy policy</a>
+      </nav>
+    </footer>
+
+  </div>
+</body>
+</html>

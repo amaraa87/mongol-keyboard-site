@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — Монгол Keyboard</title>
+  <meta name="description" content="Privacy policy for the Монгол Keyboard iOS app: typing stays on-device, nothing is logged, and only an explicitly submitted sentence ever leaves the device.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Golos+Text:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230E3880'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial'>Ө</text></svg>">
+</head>
+<body>
+  <div class="wrap">
+
+    <header class="site-header">
+      <a class="wordmark" href="../"><span class="glyph" aria-hidden="true">Ө</span>Монгол Keyboard</a>
+      <nav class="site-nav" aria-label="Site">
+        <a href="../">Нүүр</a>
+        <a href="../support/">Тусламж</a>
+        <a href="./" aria-current="page">Privacy</a>
+      </nav>
+    </header>
+
+    <main class="doc">
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated: 2026-07-14</p>
+
+      <p class="lede">
+        <span lang="mn"><b>Товчхондоо:</b> таны бичсэн зүйл төхөөрөмж дээрээ үлдэнэ. Бид юу ч бүртгэдэггүй. Зөвхөн та ✨Засах дээр дарсан үед л тухайн нэг өгүүлбэр илгээгдэнэ.</span><br>
+        <b>The short version:</b> your typing stays on your device, we log nothing, and nothing is ever sent anywhere except the single sentence you explicitly ask to have corrected.
+      </p>
+
+      <p>Монгол Keyboard is an iOS keyboard that converts Mongolian Latin transliteration to Cyrillic on your device, with an optional AI grammar-correction feature. This policy describes exactly what the app does with your data.</p>
+
+      <h2>What the keyboard does with your typing</h2>
+      <ul>
+        <li>All transliteration (Latin → Cyrillic) happens <strong>entirely on your device</strong>. Keystrokes are never logged, stored, or transmitted.</li>
+        <li>The keyboard contains <strong>no analytics, no advertising SDKs, and no trackers</strong> of any kind.</li>
+      </ul>
+
+      <h2>The ✨Засах (grammar fix) feature</h2>
+      <ul>
+        <li>Only when you <strong>explicitly tap the Засах key</strong>, the current sentence (at most 500 characters) is sent over an encrypted HTTPS connection for grammar correction, and the corrected sentence is returned.</li>
+        <li>Depending on how you set the app up, that request goes to one of two places:
+          <ul>
+            <li><strong>Direct mode</strong> — straight to the <strong>Anthropic API</strong> (<code>api.anthropic.com</code>), authenticated with your own API key.</li>
+            <li><strong>Server mode</strong> — to the grammar server whose URL you configured in the app, which forwards the sentence to the Anthropic API. The server holds the API key, enforces rate limits, and <strong>never stores or logs sentence text</strong>. In this mode the request also carries a random device identifier (a locally generated UUID) used only for rate limiting — it is not linked to your name, account, or anything else about you.</li>
+          </ul>
+        </li>
+        <li>Nothing is sent while you type. The request contains only that one sentence — no conversation history, no location, and no identifiers beyond the anonymous UUID described above.</li>
+        <li>The app does not store the sentences it corrects. Processing by Anthropic is governed by <a href="https://www.anthropic.com/legal/privacy">Anthropic's privacy policy</a>; with standard API settings Anthropic does not use API inputs to train its models.</li>
+        <li>If you never tap Засах (or never enter an API key or server address), the keyboard makes <strong>no network connections at all</strong>.</li>
+      </ul>
+
+      <h2>Your API key</h2>
+      <ul>
+        <li>An API key you enter in the app is stored <strong>only on your device</strong>, in the app's private App Group container, so the keyboard extension can read it.</li>
+        <li>It is never transmitted anywhere except directly to <code>api.anthropic.com</code> to authenticate your own requests, and it never appears in logs.</li>
+        <li>In server mode no API key is stored on the device at all.</li>
+      </ul>
+
+      <h2>iOS "Allow Full Access"</h2>
+      <p>iOS requires the <em>Allow Full Access</em> permission for any keyboard that makes network requests. Монгол Keyboard uses this permission <strong>solely</strong> for the Засах call described above. Typing and transliteration work fully without it.</p>
+
+      <h2>Data we collect</h2>
+      <p>We collect no personal data. In direct mode we (the developer) operate no servers, receive no data, and have no way to see anything you type. In server mode the grammar server processes each request in memory — the sentence is forwarded for correction and then discarded; only anonymous request counts per device UUID are kept for the current day to enforce rate limits. Sentence text is never written to logs or storage.</p>
+
+      <h2>Children's privacy</h2>
+      <p>The app collects no personal data from anyone, including children.</p>
+
+      <h2>Changes</h2>
+      <p>Any change to this policy will be published at this URL with an updated date.</p>
+
+      <h2>Contact</h2>
+      <p>Questions: email <a href="mailto:amarsanaa.jargal@matsuyaginza.com">amarsanaa.jargal@matsuyaginza.com</a>.</p>
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2026 Монгол Keyboard</span>
+      <nav aria-label="Footer">
+        <a href="../support/">Тусламж · Support</a>
+        <a href="./">Privacy policy</a>
+      </nav>
+    </footer>
+
+  </div>
+</body>
+</html>
