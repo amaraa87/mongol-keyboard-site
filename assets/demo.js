@@ -1,7 +1,7 @@
 // The hero demo: replays exactly what the keyboard does.
-// Latin keystrokes press on the keycap row while the field fills with
-// Cyrillic (the й in "сайн" appears the way the real engine produces it),
-// then the ✨Засах key fires and the grammar fix lands.
+// IME-style: the field shows the Latin exactly as typed, and the whole
+// word turns Cyrillic at the space (the й in "сайн" appears the way the
+// real engine produces it), then the ✨ key fires and the grammar fix lands.
 (function () {
   "use strict";
 
@@ -13,19 +13,19 @@
 
   // [latin key pressed, document state after the keystroke]
   var steps = [
-    ["s", "с"],
-    ["a", "са"],
-    ["i", "сай"],
-    ["n", "сайн"],
+    ["s", "s"],
+    ["a", "sa"],
+    ["i", "sai"],
+    ["n", "sain"],
     [" ", "сайн "],
-    ["b", "сайн б"],
-    ["a", "сайн ба"],
-    ["i", "сайн бай"],
-    ["n", "сайн байн"],
-    ["a", "сайн байна"],
+    ["b", "сайн b"],
+    ["a", "сайн ba"],
+    ["i", "сайн bai"],
+    ["n", "сайн bain"],
+    ["a", "сайн baina"],
     [" ", "сайн байна "],
-    ["u", "сайн байна у"],
-    ["u", "сайн байна уу"],
+    ["u", "сайн байна u"],
+    ["u", "сайн байна uu"],
   ];
   var FIXED = "Сайн байна уу?";
 
