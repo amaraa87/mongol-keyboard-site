@@ -26,7 +26,7 @@
 
     <main class="doc">
       <h1>Privacy Policy</h1>
-      <p class="updated">Last updated: 2026-07-17</p>
+      <p class="updated">Last updated: 2026-07-19</p>
 
       <p class="lede">
         <span lang="mn"><b>Товчхондоо:</b> таны бичсэн зүйл төхөөрөмж дээрээ үлдэнэ. Зөвхөн та ✨Засах дээр дарсан үед л тухайн нэг өгүүлбэр илгээгдэнэ — өгүүлбэрийн текстийг бид хэзээ ч хадгалдаггүй, лог хийдэггүй.</span><br>
@@ -54,7 +54,8 @@
         </li>
         <li>Nothing is sent while you type. The request contains only that one sentence — no conversation history, no location, and no identifiers beyond the anonymous UUID described above.</li>
         <li>The app does not store the sentences it corrects. Processing by Anthropic is governed by <a href="https://www.anthropic.com/legal/privacy">Anthropic's privacy policy</a>; with standard API settings Anthropic does not use API inputs to train its models. Anthropic ordinarily retains API inputs and outputs for up to 30 days; content flagged by its safety systems can be retained longer (up to two years), and retention may be extended where the law requires — see Anthropic's data-retention policy for the authoritative terms.</li>
-        <li>If you never tap Засах, the keyboard makes <strong>no network connections at all</strong>.</li>
+        <li>So that corrections respond quickly, when the keyboard opens with the AI feature enabled, Full Access granted, <strong>and a correction server configured</strong> (the built-in or a custom one), it may make one <strong>empty warm-up connection</strong> to that server — a request to its public status route that carries <strong>no text, no typing, no API key, and no identifiers</strong>. Its only purpose is having the encrypted connection ready before you tap Засах. Turning ✨ AI засвар off in the app disables these connections together with the feature. In direct mode (your own API key, no server) there is no warm-up: the keyboard contacts the Anthropic API only for a correction you asked for.</li>
+        <li>If the AI feature is turned off — or Full Access is not granted — the keyboard makes <strong>no network connections at all</strong>.</li>
       </ul>
 
       <h2>Your API key</h2>
@@ -65,7 +66,7 @@
       </ul>
 
       <h2>iOS "Allow Full Access"</h2>
-      <p>iOS requires the <em>Allow Full Access</em> permission for any keyboard that makes network requests. Монгол Keyboard uses this permission for exactly two things: the Засах call described above, and saving your candidate-bar picks to the on-device dictionary described above (never transmitted). Typing and transliteration work fully without it — the keyboard just won't remember your picks, and Засах is unavailable.</p>
+      <p>iOS requires the <em>Allow Full Access</em> permission for any keyboard that makes network requests. Монгол Keyboard uses this permission for exactly two things: the Засах feature (the correction call and its empty warm-up connection, both described above), and saving your candidate-bar picks to the on-device dictionary described above (never transmitted). Typing and transliteration work fully without it — the keyboard just won't remember your picks, and Засах is unavailable.</p>
 
       <h2>Data we collect</h2>
       <p>The app has no accounts, and we never receive your name, email, contacts, location, or anything else about you. When you tap Засах with the built-in server active, the application payload contains exactly two things: the sentence you asked to correct, and the app's random device UUID. Like any internet request, it also carries network-level metadata (notably your IP address and connection details): the built-in server sits behind the Cloudflare network, which processes that metadata transiently to route and protect traffic under <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare's privacy policy</a>; our server itself does not use or store IP addresses. The server processes the request in memory — the sentence is forwarded for correction and then discarded. What it keeps: anonymous request counts per device UUID for the current day (rate limiting), and standard operational logs containing request metadata only — a timestamp, a truncated prefix of the device UUID, the input length, the response status, and the processing time. Sentence text is never written to logs or storage. In Apple's App Privacy terms, the sentence and the device UUID count as collected data "linked" to a device identifier — which is why the App Store label lists them — but they map to no account and no personal identity. In direct mode we operate nothing at all — requests go from your device to Anthropic and we have no way to see them. (A custom server's logging is under its operator's control — see above.)</p>
@@ -77,7 +78,7 @@
       <p>Any change to this policy will be published at this URL with an updated date.</p>
 
       <h2>Contact</h2>
-      <p>Questions: email <a href="mailto:amarsanaa.jargal@matsuyaginza.com">amarsanaa.jargal@matsuyaginza.com</a>.</p>
+      <p>Questions: email <a href="mailto:amarsanaa@outlook.com">amarsanaa@outlook.com</a>.</p>
     </main>
 
     <footer class="site-footer">
