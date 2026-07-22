@@ -26,7 +26,7 @@
 
     <main class="doc">
       <h1>Privacy Policy</h1>
-      <p class="updated">Last updated: 2026-07-19</p>
+      <p class="updated">Last updated: 2026-07-22</p>
 
       <p class="lede">
         <span lang="mn"><b>Товчхондоо:</b> таны бичсэн зүйл төхөөрөмж дээрээ үлдэнэ. Зөвхөн та ✨Засах дээр дарсан үед л тухайн нэг өгүүлбэр илгээгдэнэ — өгүүлбэрийн текстийг бид хэзээ ч хадгалдаггүй, лог хийдэггүй.</span><br>
@@ -38,7 +38,7 @@
       <h2>What the keyboard does with your typing</h2>
       <ul>
         <li>All transliteration (Latin → Cyrillic) happens <strong>entirely on your device</strong>. Keystrokes are never logged or transmitted.</li>
-        <li>When you pick a suggestion from the candidate bar, that single word pair (what you typed → what you chose) is saved to a small dictionary <strong>in the app's private container on your device</strong>, so it can be offered first next time. It never leaves the device, is capped in size, and can be cleared any time in the app. Saving these picks requires the <em>Allow Full Access</em> permission (iOS only allows a keyboard to write to the app's shared container with it); without the permission the keyboard works identically but doesn't remember your picks.</li>
+        <li>When you pick a suggestion from the candidate bar, that single word pair (what you typed → what you chose) is saved to a small dictionary <strong>in the app's private container on your device</strong>, so it can be offered first next time. The keyboard also keeps an on-device count of <strong>which Cyrillic words you commit most often</strong> (the words only — never sentences, never context), so your own frequent words can be recommended as you start typing them. Both stores never leave the device, are capped in size, and are cleared together any time in the app. Saving them requires the <em>Allow Full Access</em> permission (iOS only allows a keyboard to write to the app's shared container with it); without the permission the keyboard works identically but doesn't remember or count anything.</li>
         <li>The keyboard contains <strong>no analytics, no advertising SDKs, and no trackers</strong> of any kind.</li>
       </ul>
 
@@ -66,7 +66,7 @@
       </ul>
 
       <h2>iOS "Allow Full Access"</h2>
-      <p>iOS requires the <em>Allow Full Access</em> permission for any keyboard that makes network requests. Монгол Keyboard uses this permission for exactly two things: the Засах feature (the correction call and its empty warm-up connection, both described above), and saving your candidate-bar picks to the on-device dictionary described above (never transmitted). Typing and transliteration work fully without it — the keyboard just won't remember your picks, and Засах is unavailable.</p>
+      <p>iOS requires the <em>Allow Full Access</em> permission for any keyboard that makes network requests. Монгол Keyboard uses this permission for exactly two things: the Засах feature (the correction call and its empty warm-up connection, both described above), and saving your candidate-bar picks and word-use counts to the on-device stores described above (never transmitted). Typing and transliteration work fully without it — the keyboard just won't remember or count anything, and Засах is unavailable.</p>
 
       <h2>Data we collect</h2>
       <p>The app has no accounts, and we never receive your name, email, contacts, location, or anything else about you. When you tap Засах with the built-in server active, the application payload contains exactly two things: the sentence you asked to correct, and the app's random device UUID. Like any internet request, it also carries network-level metadata (notably your IP address and connection details): the built-in server sits behind the Cloudflare network, which processes that metadata transiently to route and protect traffic under <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare's privacy policy</a>; our server itself does not use or store IP addresses. The server processes the request in memory — the sentence is forwarded for correction and then discarded. What it keeps: anonymous request counts per device UUID for the current day (rate limiting), and standard operational logs containing request metadata only — a timestamp, a truncated prefix of the device UUID, the input length, the response status, and the processing time. Sentence text is never written to logs or storage. In Apple's App Privacy terms, the sentence and the device UUID count as collected data "linked" to a device identifier — which is why the App Store label lists them — but they map to no account and no personal identity. In direct mode we operate nothing at all — requests go from your device to Anthropic and we have no way to see them. (A custom server's logging is under its operator's control — see above.)</p>
