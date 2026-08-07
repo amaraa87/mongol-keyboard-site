@@ -26,7 +26,7 @@
 
     <main class="doc">
       <h1>Privacy Policy</h1>
-      <p class="updated">Last updated: 2026-07-22</p>
+      <p class="updated">Last updated: 2026-08-04</p>
 
       <p class="lede">
         <span lang="mn"><b>Товчхондоо:</b> таны бичсэн зүйл төхөөрөмж дээрээ үлдэнэ. Зөвхөн та ✨Засах дээр дарсан үед л тухайн нэг өгүүлбэр илгээгдэнэ — өгүүлбэрийн текстийг бид хэзээ ч хадгалдаггүй, лог хийдэггүй.</span><br>
@@ -45,25 +45,16 @@
       <h2>The ✨Засах (grammar fix) feature</h2>
       <ul>
         <li>Only when you <strong>explicitly tap the Засах key</strong>, the current sentence (at most 500 characters) is sent over an encrypted HTTPS connection for grammar correction, and the corrected sentence is returned.</li>
-        <li>Depending on how the app is set up, that request goes to one of three places:
-          <ul>
-            <li><strong>Built-in server (on releases that include it)</strong> — the app's own correction server (<code>keyboard-api.zon.mn</code>), which forwards the sentence to the Anthropic API. The server holds the API key, enforces rate limits, and <strong>never stores or logs sentence text</strong>. The request also carries a random device identifier (a locally generated UUID) used only for rate limiting — it is not linked to your name, account, or anything else about you. There are no user accounts. You can turn the built-in server off in the app.</li>
-            <li><strong>Custom server mode</strong> — the same request format, but to a server whose URL you configured yourself. What that server does with the request is up to its operator — running your own copy of the app's open-source proxy gives you the same behavior as the built-in server; the guarantees in this policy do not extend to arbitrary third-party servers you point the app at.</li>
-            <li><strong>Direct mode</strong> — with no server configured, straight to the <strong>Anthropic API</strong> (<code>api.anthropic.com</code>), authenticated with your own API key.</li>
-          </ul>
-        </li>
+        <li>The request goes to the app's own correction server (<code>keyboard-api.zon.mn</code>), which forwards the sentence to the Anthropic API. The server holds the API key, enforces rate limits, and <strong>never stores or logs sentence text</strong>. The request also carries a random device identifier (a locally generated UUID) used only for rate limiting — it is not linked to your name, account, or anything else about you. There are no user accounts, and <strong>the feature is free: there is nothing to buy, anywhere in the app</strong>. You can turn it off in the app.</li>
+        <li>Nothing else is on offer: the App Store app has no setting for a different server and no place to enter an API key, so your sentence can only ever go to the server named above. (Developers building the app from source can point a development build elsewhere; that is not something the App Store app can do.)</li>
         <li>Nothing is sent while you type. The request contains only that one sentence — no conversation history, no location, and no identifiers beyond the anonymous UUID described above.</li>
         <li>The app does not store the sentences it corrects. Processing by Anthropic is governed by <a href="https://www.anthropic.com/legal/privacy">Anthropic's privacy policy</a>; with standard API settings Anthropic does not use API inputs to train its models. Anthropic ordinarily retains API inputs and outputs for up to 30 days; content flagged by its safety systems can be retained longer (up to two years), and retention may be extended where the law requires — see Anthropic's data-retention policy for the authoritative terms.</li>
-        <li>So that corrections respond quickly, when the keyboard opens with the AI feature enabled, Full Access granted, <strong>and a correction server configured</strong> (the built-in or a custom one), it may make one <strong>empty warm-up connection</strong> to that server — a request to its public status route that carries <strong>no text, no typing, no API key, and no identifiers</strong>. Its only purpose is having the encrypted connection ready before you tap Засах. Turning ✨ AI засвар off in the app disables these connections together with the feature. In direct mode (your own API key, no server) there is no warm-up: the keyboard contacts the Anthropic API only for a correction you asked for.</li>
+        <li>So that corrections respond quickly, when the keyboard opens with the AI feature enabled and Full Access granted, it may make one <strong>empty warm-up connection</strong> to that same correction server — a request to its public status route that carries <strong>no text, no typing, and no identifiers</strong>. Its only purpose is having the encrypted connection ready before you tap Засах. Turning ✨ AI засвар off in the app disables these connections together with the feature.</li>
         <li>If the AI feature is turned off — or Full Access is not granted — the keyboard makes <strong>no network connections at all</strong>.</li>
       </ul>
 
-      <h2>Your API key</h2>
-      <ul>
-        <li>In the built-in-server setup <strong>no API key exists on your device at all</strong> — most people never need this section.</li>
-        <li>An API key you optionally enter for direct mode is stored <strong>only on your device</strong>, in the app's private App Group container, so the keyboard extension can read it.</li>
-        <li>It is never transmitted anywhere except directly to <code>api.anthropic.com</code> to authenticate your own requests, and it never appears in logs.</li>
-      </ul>
+      <h2>API keys</h2>
+      <p><strong>No API key exists on your device.</strong> The correction server holds the only key, and the app gives you no way to enter one — you never need an account, a key, or a payment of any kind to use any part of this keyboard.</p>
 
       <h2>iOS "Allow Full Access"</h2>
       <p>iOS requires the <em>Allow Full Access</em> permission for any keyboard that makes network requests. Монгол Keyboard uses this permission for exactly two things: the Засах feature (the correction call and its empty warm-up connection, both described above), and saving your candidate-bar picks and word-use counts to the on-device stores described above (never transmitted). Typing and transliteration work fully without it — the keyboard just won't remember or count anything, and Засах is unavailable.</p>
