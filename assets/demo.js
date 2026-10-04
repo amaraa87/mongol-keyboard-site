@@ -1,7 +1,7 @@
 // The hero demo: replays exactly what the keyboard does.
 // IME-style: the field shows the Latin exactly as typed, and the whole
 // word turns Cyrillic at the space (the й in "сайн" appears the way the
-// real engine produces it), then the ✨ key fires and the grammar fix lands.
+// real engine produces it; the first letter is capitalised at the start).
 (function () {
   "use strict";
 
@@ -13,21 +13,21 @@
 
   // [latin key pressed, document state after the keystroke]
   var steps = [
-    ["s", "s"],
-    ["a", "sa"],
-    ["i", "sai"],
-    ["n", "sain"],
-    [" ", "сайн "],
-    ["b", "сайн b"],
-    ["a", "сайн ba"],
-    ["i", "сайн bai"],
-    ["n", "сайн bain"],
-    ["a", "сайн baina"],
-    [" ", "сайн байна "],
-    ["u", "сайн байна u"],
-    ["u", "сайн байна uu"],
+    ["s", "S"],
+    ["a", "Sa"],
+    ["i", "Sai"],
+    ["n", "Sain"],
+    [" ", "Сайн "],
+    ["b", "Сайн b"],
+    ["a", "Сайн ba"],
+    ["i", "Сайн bai"],
+    ["n", "Сайн bain"],
+    ["a", "Сайн baina"],
+    [" ", "Сайн байна "],
+    ["u", "Сайн байна u"],
+    ["u", "Сайн байна uu"],
+    [" ", "Сайн байна уу "],
   ];
-  var FIXED = "Сайн байна уу?";
 
   function key(name) {
     return row.querySelector('[data-key="' + name + '"]');
@@ -57,19 +57,8 @@
     var typer = setInterval(function () {
       if (i >= steps.length) {
         clearInterval(typer);
-        // Pause, then the ✨Засах beat: press, glow, fix lands.
-        setTimeout(function () {
-          var fix = key("fix");
-          press("fix");
-          if (fix) fix.classList.add("is-glow");
-          setTimeout(function () {
-            setText(FIXED, false);
-            latin.textContent = "✨ засварласан · corrected";
-            if (fix) fix.classList.remove("is-glow");
-          }, 550);
-          // Hold the result, then loop.
-          setTimeout(run, 4200);
-        }, 900);
+        // Hold the result, then loop.
+        setTimeout(run, 3200);
         return;
       }
       var step = steps[i];

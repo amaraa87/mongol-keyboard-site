@@ -26,44 +26,34 @@
 
     <main class="doc">
       <h1>Privacy Policy</h1>
-      <p class="updated">Last updated: 2026-08-07</p>
+      <p class="updated">Last updated: 2026-10-04</p>
 
       <p class="lede">
-        <span lang="mn"><b>Товчхондоо:</b> таны бичсэн зүйл төхөөрөмж дээрээ үлдэнэ. Зөвхөн та ✨Засах дээр дарсан үед л тухайн нэг өгүүлбэр илгээгдэнэ — өгүүлбэрийн текстийг бид хэзээ ч хадгалдаггүй, лог хийдэггүй.</span><br>
-        <b>The short version:</b> your typing stays on your device, and nothing is ever sent anywhere except the single sentence you explicitly ask to have corrected — sentence text is never stored or logged by us (the server keeps only the anonymous request metadata described below).
+        <span lang="mn"><b>Товчхондоо:</b> таны бичсэн зүйл хэзээ ч төхөөрөмжөөс гарахгүй, бид ямар ч мэдээлэл цуглуулдаггүй. Гар болон апп интернэт огт ашиглахгүй.</span>
+        <b>The short version:</b> nothing you type ever leaves your device, and we collect no data at all. The keyboard and the app make no network connections.
       </p>
 
-      <p>Монгол Keyboard is an iOS keyboard that converts Mongolian Latin transliteration to Cyrillic on your device, with an optional AI grammar-correction feature. This policy describes exactly what the app does with your data.</p>
+      <p>Монгол Keyboard is an iOS keyboard that converts Mongolian Latin transliteration to Cyrillic on your device.</p>
 
       <h2>What the keyboard does with your typing</h2>
       <ul>
-        <li>All transliteration (Latin → Cyrillic) happens <strong>entirely on your device</strong>. Keystrokes are never logged or transmitted.</li>
-        <li>When you pick a suggestion from the candidate bar, that single word pair (what you typed → what you chose) is saved to a small dictionary <strong>in the app's private container on your device</strong>, so it can be offered first next time. The keyboard also keeps an on-device count of <strong>which Cyrillic words you commit most often</strong> (the words only — never sentences, never context), so your own frequent words can be recommended as you start typing them. Both stores never leave the device, are capped in size, and are cleared together any time in the app. Saving them requires the <em>Allow Full Access</em> permission (iOS only allows a keyboard to write to the app's shared container with it); without the permission the keyboard works identically but doesn't remember or count anything.</li>
+        <li>All transliteration (Latin → Cyrillic), word suggestions and corrections happen <strong>entirely on your device</strong>, using a word list built into the app. Keystrokes are never logged or transmitted.</li>
+        <li>When you pick a suggestion from the candidate bar, that single word pair (what you typed → what you chose) is saved to a small dictionary <strong>on your device</strong>, so it can be offered first next time. The keyboard also keeps an on-device count of <strong>which Cyrillic words you commit most often</strong> (the words only — never sentences, never context), so your own frequent words can be recommended as you start typing them. Both stores never leave the device, are capped in size, and can be cleared together any time in the app (Гарын тохиргоо → Цээжилсэн үгсийг арилгах).</li>
+        <li>Learning works without <em>Allow Full Access</em>: the keyboard saves to its own private storage. With Full Access, these words are shared locally with the containing app so its learned-words editor can show and manage them. Clearing in the app also clears the keyboard's private history the next time the keyboard opens and can read the app's data. With Full Access on it always can; without Full Access, iOS may keep the app's data out of the keyboard's reach, so the keyboard's own copy is cleared the next time it opens after you turn Full Access on.</li>
         <li>The keyboard contains <strong>no analytics, no advertising SDKs, and no trackers</strong> of any kind.</li>
       </ul>
 
-      <h2>The ✨Засах (grammar fix) feature</h2>
-      <ul>
-        <li>Only when you <strong>explicitly tap the Засах key</strong>, the current sentence (at most 500 characters) is sent over an encrypted HTTPS connection for grammar correction, and the corrected sentence is returned.</li>
-        <li>The request goes to the app's own correction server (<code>keyboard-api.zon.mn</code>), which forwards the sentence to the Anthropic API. The server holds the API key, enforces rate limits, and <strong>never stores or logs sentence text</strong>. The request also carries a random device identifier (a locally generated UUID) used only for rate limiting — it is not linked to your name, account, or anything else about you. There are no user accounts, and <strong>the feature is free: there is nothing to buy, anywhere in the app</strong>. You can turn it off in the app.</li>
-        <li>Nothing else is on offer: the App Store app has no setting for a different server and no place to enter an API key, so your sentence can only ever go to the server named above. (Developers building the app from source can point a development build elsewhere; that is not something the App Store app can do.)</li>
-        <li>Nothing is sent while you type. The request contains only that one sentence — no conversation history, no location, and no identifiers beyond the anonymous UUID described above.</li>
-        <li>The app does not store the sentences it corrects. Processing by Anthropic is governed by <a href="https://www.anthropic.com/legal/privacy">Anthropic's privacy policy</a>; with standard API settings Anthropic does not use API inputs to train its models. Anthropic ordinarily retains API inputs and outputs for up to 30 days; content flagged by its safety systems can be retained longer (up to two years), and retention may be extended where the law requires — see Anthropic's data-retention policy for the authoritative terms.</li>
-        <li>So that corrections respond quickly, when the keyboard opens with the AI feature enabled and Full Access granted, it may make one <strong>empty warm-up connection</strong> to that same correction server — a request to its public status route that carries <strong>no text, no typing, and no identifiers</strong>. Its only purpose is having the encrypted connection ready before you tap Засах. Turning ✨ AI засвар off in the app disables these connections together with the feature.</li>
-        <li>If the AI feature is turned off — or Full Access is not granted — the keyboard makes <strong>no network connections at all</strong>.</li>
-      </ul>
-
-      <h2>API keys</h2>
-      <p><strong>No API key exists on your device.</strong> The correction server holds the only key, and the app gives you no way to enter one — you never need an account, a key, or a payment of any kind to use any part of this keyboard.</p>
-
       <h2>iOS "Allow Full Access"</h2>
-      <p>iOS requires the <em>Allow Full Access</em> permission for any keyboard that makes network requests. Монгол Keyboard uses this permission for exactly two things: the Засах feature (the correction call and its empty warm-up connection, both described above), and saving your candidate-bar picks and word-use counts to the on-device stores described above (never transmitted). Typing and transliteration work fully without it — the keyboard just won't remember or count anything, and Засах is unavailable.</p>
+      <p>iOS shows every keyboard that asks for <em>Allow Full Access</em> a general warning that the keyboard could transmit what you type. Монгол Keyboard never does: it contains no networking code. It uses the permission for exactly one thing — sharing your learned words and word-use counts with the containing app on your device, so you can see, edit and clear them there. Typing, transliteration, suggestions and word learning all work without it.</p>
 
       <h2>Data we collect</h2>
-      <p>The app has no accounts, and we never receive your name, email, contacts, location, or anything else about you. When you tap Засах, the application payload contains exactly two things: the sentence you asked to correct, and the app's random device UUID. Like any internet request, it also carries network-level metadata (notably your IP address and connection details): the built-in server sits behind the Cloudflare network, which processes that metadata transiently to route and protect traffic under <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare's privacy policy</a>; our server itself does not use or store IP addresses. The server processes the request in memory — the sentence is forwarded for correction and then discarded. What it keeps: anonymous request counts per device UUID for the current day (rate limiting), and standard operational logs containing request metadata only — a timestamp, a truncated prefix of the device UUID, the input length, the response status, and the processing time. Sentence text is never written to logs or storage. In Apple's App Privacy terms, the sentence and the device UUID count as collected data "linked" to a device identifier — which is why the App Store label lists them — but they map to no account and no personal identity.</p>
+      <p>None. The app has no accounts, no server and no network connections, so we never receive anything you type, any identifier, or anything else about you.</p>
+
+      <h2>Earlier versions</h2>
+      <p>Version 1.0.0 offered an optional AI grammar fix (Засах) that sent one sentence to a correction server when you tapped it. That feature and its server were removed in version 1.1.0; nothing is sent anywhere any more.</p>
 
       <h2>Children's privacy</h2>
-      <p>The app has no accounts, no ads, no tracking, and is not directed at children. The only data processed is what the Засах feature sends, exactly as described above — the same for every user, including children.</p>
+      <p>The app has no accounts, no ads, no tracking, collects nothing, and is not directed at children.</p>
 
       <h2>Changes</h2>
       <p>Any change to this policy will be published at this URL with an updated date.</p>

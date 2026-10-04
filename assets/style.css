@@ -191,10 +191,6 @@ a:hover { color: var(--sky-deep); }
 
 .key.is-down { transform: translateY(2px); background: var(--key-down); border-bottom-width: 1px; }
 
-.key.fix { background: linear-gradient(180deg, #1d5fbf, #0e3880); color: #fff; border-color: #0a2a60; }
-.key.fix small { color: #bcd4f5; }
-.key.fix.is-down { background: linear-gradient(180deg, #2f8ad8, #1d5fbf); }
-.key.fix.is-glow { box-shadow: 0 0 0 4px rgba(232, 161, 61, 0.45); }
 
 .demo-note { font-size: 13px; color: var(--ink-soft); margin: 16px 2px 0; }
 

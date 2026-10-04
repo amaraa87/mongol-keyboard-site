@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Монгол Keyboard — Латинаар бич, кириллээр гарна</title>
-  <meta name="description" content="iOS гар: латинаар бичээд зай дарахад үг тань монгол кирилл болж хувирна. ✨Засах товч нэг даралтаар өгүүлбэрийн алдааг AI-гаар засна.">
+  <meta name="description" content="iOS гар: латинаар бичээд зай дарахад үг тань монгол кирилл болж хувирна. Бүгд төхөөрөмж дээр, интернэтгүй.">
   <meta name="color-scheme" content="light dark">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,8 +27,8 @@
     <main>
       <section class="hero">
         <h1><span class="lat">sain</span> гэж бичихэд <br>сайн гэж гарна.</h1>
-        <p class="sub">Монгол Keyboard бол iOS-д зориулсан гар: латинаар бичээд зай дарахад үг тань кирилл болж хувирна — бүгд төхөөрөмж дээрээ. <strong>✨Засах</strong> товч нэг даралтаар өгүүлбэрийн алдааг AI-гаар засна.</p>
-        <p class="sub-en" lang="en">An iOS keyboard for Mongolian: type Latin and each word turns Cyrillic at the space — all on-device. One tap on ✨Засах fixes your sentence with AI.</p>
+        <p class="sub">Монгол Keyboard бол iOS-д зориулсан гар: латинаар бичээд зай дарахад үг тань кирилл болж хувирна — бүгд төхөөрөмж дээрээ. <strong>АБВ</strong> горимоор кирилл үсгээр шууд бичиж болно; гар интернэт огт ашиглахгүй.</p>
+        <p class="sub-en" lang="en">An iOS keyboard for Mongolian: type Latin and each word turns Cyrillic at the space — all on-device. An АБВ mode types Cyrillic directly, and the keyboard never goes online.</p>
 
         <div class="demo">
           <div class="demo-live">
@@ -42,7 +42,6 @@
               <div class="key" data-key="b">б<small>b</small></div>
               <div class="key" data-key="u">у<small>u</small></div>
               <div class="key" data-key="space" style="flex:1 1 90px">зай<small>space</small></div>
-              <div class="key fix" data-key="fix">✨<small>Засах</small></div>
             </div>
           </div>
           <div class="demo-static">
@@ -62,26 +61,25 @@
             <span class="en" lang="en">Add the keyboard in iOS Settings.</span>
           </li>
           <li>
-            <b>“Allow Full Access”-г асаа</b>
-            Хоёрхон зүйлд хэрэгтэй: ✨Засах товчны AI дуудлага, мөн сонголтын мөрөөс сонгосон үгс болон байнга бичдэг үгсийг тань төхөөрөмж дээр цээжлэх. Бичих, хөрвүүлэх, сонголтын мөр нь үүнгүйгээр ч бүрэн ажиллана — гэхдээ ✨Засах ажиллахгүй, таны сонголтыг цээжлэх, түгээмэл үгсийг тань эхэнд санал болгох нь ч унтарна.
-            <span class="en" lang="en">Needed for exactly two things: the ✨Засах AI call, and remembering your candidate picks and frequent words on your device. Typing, conversion and the candidate bar all work fully without it — but ✨Засах won't run, and nothing is remembered or ranked for you.</span>
-          </li>
-          <li>
             <b>🌐 товчоор сонгоод бич</b>
             Аль ч апп дотор 🌐 товчоор Монгол Keyboard-г сонгоод <span class="lat">sain baina uu</span> гэж бичээд үзээрэй.
             <span class="en" lang="en">Switch with the 🌐 key and start typing.</span>
           </li>
+          <li>
+            <b>(Заавал биш) “Allow Full Access”</b>
+            Ганцхан зүйлд хэрэгтэй: гарын цээжилсэн үгсийг апп дотроо харж, засаж, арилгах. Бичих, хөрвүүлэх, сонголтын мөр, үг цээжлэх нь үүнгүйгээр ч бүрэн ажиллана. Гар интернэт огт ашиглахгүй.
+            <span class="en" lang="en">Optional, for one thing only: seeing and managing the keyboard's learned words in the app. Typing, conversion, the candidate bar and learning all work without it, and the keyboard never goes online.</span>
+          </li>
         </ol>
       </section>
 
-      <section id="zasah">
-        <p class="eyebrow">✨Засах</p>
-        <h2>AI засвар — үнэгүй, ямар ч тохиргоогүй</h2>
-        <p>Засах товч курсорын өмнөх өгүүлбэрийг л (дээд тал нь 500 тэмдэгт) илгээж, зөв бичгийн алдааг нь засаад буцаана. Энэ холболт зориулалтаараа <em>зөвхөн засвар</em> хийдэг — чат биш:</p>
+      <section id="offline">
+        <p class="eyebrow">Нууцлал / Privacy</p>
+        <h2>Интернэтгүй — бүх зүйл таны төхөөрөмж дээр</h2>
         <div class="promise">
-          <div><b>Бичих үед юу ч илгээгддэггүй</b><span>Зөвхөн та ✨Засах дээр дарсан үед л нэг өгүүлбэр илгээгдэнэ.</span></div>
-          <div><b>Хязгаар бүхий, хаалттай загвар</b><span>2 секунд тутамд нэг, өдөрт 200 хүсэлт. Хариу нь зөвхөн засварласан өгүүлбэр байж чадна — эссэ, орчуулга, чат байх боломжгүй.</span></div>
-          <div><b>Түлхүүргүй, үнэгүй</b><span>Төхөөрөмж дээр ямар ч API түлхүүр хадгалагддаггүй. Бүртгэл, төлбөр, тохиргоо шаардахгүй — зөвхөн дээрх 2-р алхмын “Allow Full Access”-г асаахад л ажиллана.</span></div>
+          <div><b>Юу ч илгээгддэггүй</b><span>Гар интернэт огт ашиглахгүй: бичсэн зүйл тань хаашаа ч явахгүй, ямар ч мэдээлэл цуглуулахгүй.</span></div>
+          <div><b>Гурван горим нэг товчинд</b><span>A→А — латинаар бичээд кирилл болгох, АБВ — кирилл үсгээр шууд, ABC — латинаар.</span></div>
+          <div><b>Бүртгэлгүй, үнэгүй</b><span>Бүртгэл, түлхүүр, төлбөр шаардахгүй. Сонгосон үгс зөвхөн таны төхөөрөмж дээр хадгалагдаж, аппаас арилгаж болно.</span></div>
         </div>
       </section>
     </main>
