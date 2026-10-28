@@ -292,6 +292,9 @@ h2 {
   font-size: 16px;
 }
 .doc li { margin: 6px 0; }
+.doc table { border-collapse: collapse; width: 100%; font-size: 15px; margin: 12px 0; }
+.doc th, .doc td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid var(--rule); }
+.doc th { font-weight: 600; }
 
 /* ── FAQ (support) ──────────────────────────────────────────────────── */
 
