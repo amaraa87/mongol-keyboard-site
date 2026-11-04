@@ -26,7 +26,7 @@
 
     <main class="doc">
       <h1>Privacy Policy</h1>
-      <p class="updated">Last updated: 2026-10-28 (version 1.2.0)</p>
+      <p class="updated">Last updated: 2026-11-04 (version 1.2.3)</p>
 
       <p class="lede">
         <span lang="mn"><b>Товчхондоо:</b> бичих, хөрвүүлэх, үг санал болгох нь бүгд таны төхөөрөмж дээр, интернэтгүй хийгддэг. Цорын ганц үл хамаарах зүйл бол 1.2.0 хувилбараас нэмэгдэх, та өөрөө асаах ✨ AI засвар: одоогийн өгүүлбэр зөвхөн AI засварын товчийг дарах үед л илгээгдэнэ; нэргүй бүртгэлийн дугаар нь мөн засвар асаалттай байхад аппыг нээх үед болон худалдан авалтыг тооцох, дахин оролдох үед (засвар унтраалттай байсан ч) илгээгдэнэ. Өөр ямар ч бичвэр илгээгдэхгүй; худалдан авалтын мэдээлэл болон манай серверийн хадгалдаг зүйлсийг доор тайлбарлав.</span><br>
@@ -34,8 +34,8 @@
       </p>
 
       <p>
-        <span lang="mn"><b>Та аль хувилбарыг ашиглаж байна:</b> 1.1.0 ба 1.1.1 хувилбарууд: гар болон апп интернэтэд огт холбогддоггүй, ямар ч мэдээлэл цуглуулдаггүй. 1.2.0 хувилбараас: доор тайлбарласан, сонголтоор асаах ✨ AI засвар нэмэгдэнэ; бусад бүх зүйл урьдын адил төхөөрөмж дээр үлдэнэ.</span><br>
-        <b>Which version you have:</b> versions 1.1.0 and 1.1.1: the keyboard and app make no network connections and collect no data at all. From version 1.2.0: the opt-in ✨ AI fix described below is added; everything else stays on-device as before.
+        <span lang="mn"><b>Та аль хувилбарыг ашиглаж байна:</b> 1.1.0 ба 1.1.1 хувилбарууд: гар болон апп интернэтэд огт холбогддоггүй, ямар ч мэдээлэл цуглуулдаггүй. 1.2.0 хувилбараас: доор тайлбарласан, сонголтоор асаах ✨ AI засвар нэмэгдэнэ; бусад бүх зүйл урьдын адил төхөөрөмж дээр үлдэнэ. 1.2.0–1.2.2 хувилбарууд засварт 2026-11-04 хүртэл Anthropic-ийн Claude AI-г ашиглаж байсан; тэр өдрөөс эхлэн эдгээр хувилбарын AI засвар ажиллахаа больсон (гар «Үйлчилгээ түр боломжгүй» гэж харуулна): AI үйлчилгээ үзүүлэгч Moonshot AI (Kimi)-г нэрлэж, дахин зөвшөөрөл асуудаг 1.2.3 хувилбарт шинэчилнэ үү. Таны засварын үлдэгдэл, худалдан авалт хэвээр хадгалагдана.</span><br>
+        <b>Which version you have:</b> versions 1.1.0 and 1.1.1: the keyboard and app make no network connections and collect no data at all. From version 1.2.0: the opt-in ✨ AI fix described below is added; everything else stays on-device as before. Versions 1.2.0–1.2.2 used Anthropic's Claude for the fix until 2026-11-04; from that date their AI fix no longer works (the keyboard says the service is unavailable): update to 1.2.3, which names the new AI provider, Moonshot AI (Kimi), and asks you to agree again. Your fix balance and purchases are kept.
       </p>
 
       <p>Монгол Keyboard is an iOS keyboard that converts Mongolian Latin transliteration to Cyrillic on your device. <strong>Typing, conversion and suggestions never leave your device.</strong> The one exception, from version 1.2.0, is the optional <strong>✨ AI fix</strong>: it is off until you turn it on in the app and agree. Even then, the sentence is sent only at the moment you tap the AI fix key; the anonymous account number (never any text) is also sent when you open the app with the fix on and when a fix-pack purchase is credited or retried, even with the fix off.</p>
@@ -49,15 +49,17 @@
       </ul>
 
       <h2>The ✨ AI fix (optional, from version 1.2.0) <span lang="mn">· ✨ AI засвар (сонголтоор, 1.2.0 хувилбараас)</span></h2>
-      <p>The AI fix key fixes the text before the cursor: it converts Mongolian typed in Latin letters to Cyrillic and corrects spelling, grammar and punctuation. It is <strong>off by default</strong>. The app turns it on only after showing what is sent and to whom and asking you to agree; you can turn it off there at any time, and the key disappears.</p>
+      <p>The AI fix key fixes the text before the cursor: it converts Mongolian typed in Latin letters to Cyrillic and corrects spelling, grammar and punctuation. It is <strong>off by default</strong>. The app turns it on only after showing what is sent and to whom and asking you to agree (1.2.3 asks again, because the AI provider changed); you can turn it off there at any time, and the key disappears.</p>
 
       <p><strong>What is sent, and when:</strong> when you tap the AI fix key — the text before the cursor in the current field (the current sentence, at most 500 characters) and an anonymous account number (below). Nothing else you type is ever sent. The app itself sends only the anonymous account number, never any text: each time you open it with the ✨ fix on, to show your fix balance, and with a fix-pack purchase, to credit it (a purchase not yet credited is retried each time you open the app, even if you have turned the fix off since). The app listens for StoreKit transaction updates and can complete an already-authorized pending purchase while it remains running, including in the background. Sentence text is never sent by these purchase retries.</p>
 
       <p><strong>To whom:</strong></p>
       <ol>
         <li><strong>Our server</strong>, <code>keyboard-api.zon.mn</code> (run by the developer, hosted in Seoul, South Korea). It passes the text to the AI and returns the result. It <strong>does not store or log the text</strong> — neither what you sent nor the corrected result.</li>
-        <li><strong>Anthropic, PBC</strong>, whose Claude AI model makes the correction. Anthropic receives only the text, from our server — not your device, IP address or account number — and processes it as our service provider under its commercial API terms. Anthropic states that it does not use API inputs or outputs to train its models and that it deletes them from its systems within 30 days by default — text its automated safety systems flag as a violation of its Usage Policy can be kept for up to 2 years, and it may keep data longer where the law requires (<a href="https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data" rel="noopener">how long Anthropic stores data</a>, <a href="https://privacy.claude.com/en/articles/7996868-is-my-data-used-for-model-training" rel="noopener">whether it is used for training</a>; its <a href="https://www.anthropic.com/legal/privacy" rel="noopener">privacy policy</a>).</li>
+        <li><strong>Moonshot AI PTE. LTD.</strong> (Singapore), whose Kimi AI model makes the correction (from 2026-11-04, app version 1.2.3). Moonshot AI receives only the text, from our server — not your device, IP address or account number. Under its privacy policy it keeps the text with no fixed deletion period, for as long as it considers necessary for its services and purposes (including improving them, safety and legal obligations), and stores it on servers in Singapore; under its terms of service it may use the text to provide, maintain, develop and improve its services, including its AI models. Its automated safeguards, including content safety reviews, apply to all text it receives. We have no zero-data-retention or no-training agreement with Moonshot AI (its <a href="https://platform.kimi.ai/docs/agreement/userprivacy.md" rel="noopener">privacy policy</a>, its <a href="https://platform.kimi.ai/docs/agreement/modeluse.md" rel="noopener">terms of service</a>).</li>
       </ol>
+
+      <p><em>Before 2026-11-04 (versions 1.2.0–1.2.2):</em> the correction was made by <strong>Anthropic, PBC</strong>'s Claude AI model instead. Anthropic received only the text, from our server, and states that it does not use API inputs or outputs to train its models and that it deletes them within 30 days by default — text its automated safety systems flag as a violation of its Usage Policy can be kept for up to 2 years, and it may keep data longer where the law requires (<a href="https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data" rel="noopener">how long Anthropic stores data</a>, <a href="https://privacy.claude.com/en/articles/7996868-is-my-data-used-for-model-training" rel="noopener">whether it is used for training</a>; its <a href="https://www.anthropic.com/legal/privacy" rel="noopener">privacy policy</a>). From 2026-11-04 our server refuses a fix from those versions and passes its text to no AI.</p>
 
       <p><strong>What our server keeps:</strong></p>
       <ul>
@@ -86,7 +88,7 @@
           <tr><th>Data</th><th>Linked to</th><th>Why</th></tr>
         </thead>
         <tbody>
-          <tr><td>The text before the cursor, when you tap the AI fix key</td><td>nothing (not stored by us; deleted by Anthropic within 30 days by default, without any identifier)</td><td>To correct it</td></tr>
+          <tr><td>The text before the cursor, when you tap the AI fix key</td><td>nothing (not stored by us; kept by Moonshot AI without any identifier, with no fixed deletion period — as long as it considers necessary for its services and purposes, including improving them, safety and legal obligations — on servers in Singapore)</td><td>To correct it; Moonshot AI may also use it to develop and improve its services, including its AI models</td></tr>
           <tr><td>Anonymous account number (UUID)</td><td>your fix balance and purchases</td><td>To count free and paid fixes</td></tr>
           <tr><td>Fix-pack purchases (transaction id, product, price, currency, dates)</td><td>the account number</td><td>To credit them and handle refunds</td></tr>
           <tr><td>Per-request metadata (time, model, status, tokens, cost, duration, text length)</td><td>the account number</td><td>To run, limit and pay for the service</td></tr>
@@ -95,10 +97,14 @@
       <p>No tracking, no advertising, no analytics SDKs. In versions 1.1.0 and 1.1.1 nothing is sent or collected at all. From version 1.2.0 nothing is collected unless you turn the ✨ AI fix on; with it on, the sentence is sent only when you tap the AI fix key, and the anonymous account number also when you open the app with the fix on and when a purchase is credited or retried (a pending purchase is retried even after you turn the fix off).</p>
 
       <h2>Earlier versions</h2>
-      <p>Version 1.0.0 offered an earlier AI grammar fix that sent one sentence to a correction server when you tapped it. Version 1.1.0 removed it and made no network connections at all; 1.1.1 is the same, fully offline. Version 1.2.0 brings the fix back as the opt-in ✨ AI fix described above, with a new server.</p>
+      <p>Version 1.0.0 offered an earlier AI grammar fix that sent one sentence to a correction server when you tapped it. Version 1.1.0 removed it and made no network connections at all; 1.1.1 is the same, fully offline. Version 1.2.0 brings the fix back as the opt-in ✨ AI fix described above, with a new server; 1.2.0–1.2.2 used Anthropic's Claude for it until 2026-11-04, and 1.2.3 uses Moonshot AI's Kimi and asks for consent again.</p>
 
       <h2>Children's privacy</h2>
       <p>The app has no sign-up, no ads and no tracking, and is not directed at children.</p>
+      <p>
+        <span lang="mn">18 нас хүрээгүй бол ✨ AI засварыг эцэг эх, асран хамгаалагчийнхаа зөвшөөрлөөр асаана уу: Moonshot AI өөрийн үйлчилгээг 18 нас хүрээгүй хүүхдэд зориулаагүй.</span><br>
+        If you are under 18, turn the ✨ AI fix on only with your parent's or guardian's permission: Moonshot AI's services are not intended for children under 18.
+      </p>
 
       <h2>Changes</h2>
       <p>Any change to this policy will be published at this URL with an updated date.</p>
